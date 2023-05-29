@@ -1,19 +1,19 @@
 type Query {
-  books: [Book]
+  bikes: [Bike]
 }
 
-type Book {
+type Bike {
   title: String
   author: String
 }
 
-type AddBookMutationResponse {
+type AddBikeMutationResponse {
   code: String!
   success: Boolean!
   message: String!
-  book: Book
+  bike: Bike
 }
 
 type Mutation {
-  addBook(title: String, author: String): AddBookMutationResponse
+  addBike(title: String, author: String): AddBikeMutationResponse
 }
