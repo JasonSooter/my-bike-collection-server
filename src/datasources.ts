@@ -1,10 +1,7 @@
-// Use our automatically generated Book and AddBookMutationResponse types
-// for type safety in our data source class
-import { AddBookMutationResponse, Book } from './__generated__/resolvers-types';
+import { AddBikeMutationResponse, Bike } from './__generated__/resolvers-types';
 
-export class BooksDataSource {
-  // Our example static data set
-  books: { title?: string; author?: string }[] = [
+export class BikesDataSource {
+  bikes: { title?: string; author?: string }[] = [
     {
       title: 'The Awakening',
       author: 'Kate Chopin',
@@ -15,23 +12,19 @@ export class BooksDataSource {
     },
   ];
 
-  getBooks(): Book[] {
-    // simulate fetching a list of books
-    return this.books;
+  getBikes(): Bike[] {
+    return this.bikes;
   }
 
-  // We are using a static data set for this small example, but normally
-  // this Mutation would *mutate* our underlying data using a database
-  // or a REST API.
-  async addBook(book: Book): Promise<AddBookMutationResponse> {
-    this.books.push(book);
-    console.log(this.books);
+  async addBike(bike: Bike): Promise<AddBikeMutationResponse> {
+    this.bikes.push(bike);
+    console.log(this.bikes);
 
     return {
       code: '200',
       success: true,
-      message: 'New book added!',
-      book: this.books[this.books.length - 1],
+      message: 'New bike added!',
+      bike: this.bikes[this.bikes.length - 1],
     };
   }
 }
