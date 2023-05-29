@@ -1,7 +1,7 @@
 {
-  "name": "as4-generating-types-example",
+  "name": "my-bike-collection-server",
   "version": "1.0.0",
-  "description": "An example of generating types from a schema to use in your resolvers.",
+  "description": "My Bike Collection Server",
   "main": "index.js",
   "type": "module",
   "scripts": {
